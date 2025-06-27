@@ -9,15 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^1.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
-    "recharts": "^3.0.0"
+    "recharts": "^3.0.0",
+    "@google/genai": "^1.7.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
-    "eslint": "^9.29.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   }
