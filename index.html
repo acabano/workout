@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planner Allenamenti Palestra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--color-primary)',
+            secondary: 'var(--color-secondary)',
+            accent: 'var(--color-accent)',
+            neutral: 'var(--color-neutral)',
+            'base-100': 'var(--color-base-100)',
+            info: 'var(--color-info)',
+            success: 'var(--color-success)',
+            warning: 'var(--color-warning)',
+            error: 'var(--color-error)',
+          },
+        }
+      },
+      plugins: [
+        function({ addBase, theme }) {
+          addBase({
+            ':root': {
+              '--color-primary': theme('colors.blue.600'),
+              '--color-secondary': theme('colors.purple.600'),
+              '--color-accent': theme('colors.green.500'),
+              '--color-neutral': theme('colors.gray.700'),
+              '--color-base-100': theme('colors.gray.100'),
+              '--color-info': theme('colors.sky.500'),
+              '--color-success': theme('colors.emerald.500'),
+              '--color-warning': theme('colors.amber.500'),
+              '--color-error': theme('colors.red.500'),
+            },
+            '.dark :root': { // Example for dark mode, can be extended
+              '--color-primary': theme('colors.blue.400'),
+              '--color-secondary': theme('colors.purple.400'),
+              '--color-accent': theme('colors.green.400'),
+              '--color-neutral': theme('colors.gray.300'),
+              '--color-base-100': theme('colors.gray.900'),
+              '--color-info': theme('colors.sky.400'),
+              '--color-success': theme('colors.emerald.400'),
+              '--color-warning': theme('colors.amber.400'),
+              '--color-error': theme('colors.red.400'),
+            }
+          });
+        }
+      ]
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "recharts": "https://esm.sh/recharts@^3.0.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-base-100 text-neutral antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

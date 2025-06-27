@@ -1,0 +1,6 @@
+{
+  "name": "Gym Workout Planner",
+  "description": "An application to create, manage, and track gym workouts. Users can define workout templates, log daily sessions, and view their workout history.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
